@@ -11,6 +11,12 @@ load_dotenv()
 
 account_sid = os.environ()
 
+#Create a twilio client
+account_sid = os.environ["TWILIO_ACCOUNT_SID"]
+api_key = os.environ["TWILIO_API_SID"]
+api_secret = os.environ["TWILIO_API_KEY_SECRET"]
+twilio_client = twilio.rest.Client(api_key, api_secret, account_sid)
+
 
 @app.route('/')
 def hello():
