@@ -24,7 +24,7 @@ def serve_homepage():
 if __name__ == '__main__':
     app.run(debug=True)
 
-#Request to 
+#Request to find or create a room
 def find_or_create_room(room_name):
     try:
         #try to fetch an in-progress room with this name
@@ -33,5 +33,15 @@ def find_or_create_room(room_name):
         #the room did not exist, so create it
         twilio_client.video.rooms.create(unique_name=room_name, type="go")
 
-        
+
+def get_access_token(room_name):
+    #Create the access token
+    access_token = twilio.jwt.access_token.AccessToken(account_sid, api_key, identity=uuid.uuid4().int)
+    #Create the video grant
+    video_grant = twilio.jwt.access_token.grants.VideoGrant(room=room_name)
+    #Add the video grant to the access token
+    access_token.add_grant(video_grant)
+    pass
+
+
 

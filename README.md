@@ -23,5 +23,12 @@ engineer should have a strong grasp of. You will learn how these concepts are ap
 ### Webhooks
 
 
+# Projects we will work on
+You might be wondering what projects we will we be working on in the first place? Good question:
+
+## Twilio video application
+
+This project will connect to the Twilio API, creating a video web application with a Python3/Flask backend.
+
 
 
