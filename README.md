@@ -22,6 +22,11 @@ engineer should have a strong grasp of. You will learn how these concepts are ap
 
 ### Webhooks
 
+### Scalability
+Even though all of these projects will be small. We will implement scalable architecture that is commonly seen in 
+Python/Flash applications. This will involve creating a scalable folder/file structure, as well as having readable
+modular functions all throughout.
+
 
 # Projects we will work on
 You might be wondering what projects we will we be working on in the first place? Good question:
