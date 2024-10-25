@@ -4,7 +4,7 @@ This repository is a collection of small Python/Flask projects aimed at understa
 I have a heavy Nodejs background, and as someone learning Python, I thought I would make this repo to help guide others
 transitioning to the language. 
 
-# List of concepts we Will aim to learn in this repo:
+# List of concepts we will aim to learn in this repo:
 
 ## External API's
 
