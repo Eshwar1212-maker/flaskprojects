@@ -3,9 +3,7 @@ import twilio.rest
 
 import os
 from dotenv import load_dotenv
-
 load_dotenv()
-
 
 #Create a twilio client
 account_sid = os.environ["TWILIO_ACCOUNT_SID"]
