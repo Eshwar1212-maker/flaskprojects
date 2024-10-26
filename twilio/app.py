@@ -12,8 +12,7 @@ def create_room_endpoint():
     room_name = request.json.get("room_name")
     find_or_create_room(room_name)
     access_token = get_access_token(room_name)
-    return {"token": access_token.to_jwt()}
-
+    return access_token
 
 
 @app.route('/')
