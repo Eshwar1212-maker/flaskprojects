@@ -7,15 +7,14 @@ load_dotenv()
 
 app = Flask(__name__)
 
-@app.route('/create_room/<room_name>', methods=['POST'])
-def create_room_endpoint(room_name):
+@app.route('/join-room', methods=['POST'])
+def create_room_endpoint():
+    room_name = request.json.get("room_name")
     find_or_create_room(room_name)
-    return f"Room {room_name} created or fetched", 200
+    access_token = get_access_token(room_name)
+    return {"token": access_token.to_jwt()}
 
-@app.route('/get_token/<room_name>', methods=['GET'])
-def get_token_endpoint(room_name):
-    token = get_access_token(room_name)
-    return token, 200
+
 
 @app.route('/')
 def serve_homepage():

@@ -14,7 +14,7 @@ and deal with important concepts like security, webhooks, rate limiting, etc. If
 ## Core Python concepts
 
 Another thing I really wanted to cover in this repo and collection of projects is the main core Python concepts every 
-engineer should have a strong grasp of. You will learn how these concepts are applied and used in real world codebases. 
+engineer should have a strong grasp of. You will learn how these concepts are applied and used in real world codebase's. 
 
 ### Decorators
 
