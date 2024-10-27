@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
 from flask_pymongo import PyMongo
 import os
-from api_helpers.room import find_or_create_room
-from api_helpers.access_token import get_access_token
+from api_helpers.room.room import find_or_create_room
+from api_helpers.room.access_token import get_access_token
 
 # Load environment variables from .env
 load_dotenv()
