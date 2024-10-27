@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
 from flask_pymongo import PyMongo
 import os
+from api_helpers.auth.auth import auth_blueprint 
 from api_helpers.room.room import find_or_create_room
 from api_helpers.room.access_token import get_access_token
 
@@ -15,6 +16,8 @@ app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 # Initialize Flask-PyMongo with the Flask app
 mongo = PyMongo(app)
+
+app.register_blueprint(auth_blueprint, url_prefix="/auth")
 
 @app.route('/join-room', methods=['POST'])
 def create_room_endpoint():
